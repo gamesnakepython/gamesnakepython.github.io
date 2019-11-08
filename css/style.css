@@ -1,0 +1,267 @@
+/*@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');*/
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue-Regular.woff);
+}
+
+@font-face {
+    font-family: VT323;
+    src: url(../fonts/VT323-Regular.ttf);
+}
+
+* {
+    font-family: 'VT323';
+    text-decoration: none;
+    margin: 0;
+    border: 0px;
+}
+
+body {
+    width: 99vw;
+    height: 94vh;
+    background-size: auto;
+    background-image: url("/image/fundo1.png");
+}
+
+.displayJogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    flex-direction: column;
+}
+
+canvas {
+    border: 12px inset rgb(0, 32, 5);
+    background-color: #00000056;
+    opacity: 0.6;
+}
+
+.botaoJogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+input[type="button"],
+[type="reset"],
+[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 145px;
+    height: 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 7px 0 #012c05;
+    transition: 0.01s;
+    color: #042b01;
+    text-shadow: 2px 2px 1px #495745;
+    background-image: linear-gradient(rgb(180, 185, 180), rgb(50, 83, 50));
+    margin: 10px;
+}
+
+input[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover {
+    animation: letterMove;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    letter-spacing: 3px;
+    transition: 0.01s;
+    color: white;
+    text-shadow: 2px 2px rgb(29, 29, 29);
+    box-shadow: 0 7px 0 #042b01;
+    color: white;
+    text-shadow: 2px 2px rgb(29, 29, 29);
+    width: 155px;
+    height: 27px;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+input[type="button"]:active,
+[type="reset"]:active,
+[type="submit"]:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+    transition: 0.01s;
+    outline: none;
+}
+
+.abaSuperior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    width: 1010px;
+}
+
+.placarC {
+    height: 40px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.295);
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0px 0px 0px 5px;
+}
+
+.usuarioC {
+    height: 40px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.295);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}
+
+.dificuldadeC {
+    height: 40px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.295);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}
+
+.recordC {
+    height: 40px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.295);
+    color: gold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.labelTelaJogo {
+    display: block;
+    justify-content: top;
+    align-items: top;
+    padding: 2px;
+    width: 1010px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -5px;
+    color: whitesmoke;
+    font-stretch: ultra-condensed;
+    ;
+}
+
+.displayTelaDificuldades {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.telaDificuldades a {
+    color: white;
+    font-size: 50px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50px 10px 0px 10px;
+    border: 5px inset rgb(0, 32, 5);
+}
+
+.telaDificuldades a:hover {
+    font-size: 55px;
+    width: 210px;
+    height: 210px;
+}
+
+.displayTelaDificuldades h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 40px;
+    text-shadow: 3px 3px 1px #1a1a1a;
+}
+
+.backgroundS a {
+    background-color: rgba(0, 100, 0, 0.5);
+    padding: 10px;
+    border: 5px inset rgb(1, 70, 12);
+    text-shadow: 3px 3px 1px #0e0e0e;
+}
+
+.backgroundW a {
+    background-color: rgba(0, 0, 139, 0.5);
+    padding: 10px;
+    border: 5px inset rgb(9, 4, 56);
+    text-shadow: 3px 3px 1px #0e0e0e;
+}
+
+.backgroundP a {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: 5px inset rgb(0, 0, 0);
+    text-shadow: 3px 3px 1px #3d3d3d;
+}
+
+.backgroundS a:hover {
+    background-color: green;
+    text-shadow: 3px 3px 2px green;
+    opacity: 2;
+    border: 0;
+}
+
+.backgroundW a:hover {
+    background-color: rgb(0, 0, 133);
+    text-shadow: 3px 3px 2px rgb(0, 0, 133);
+    opacity: 2;
+    border: 0;
+}
+
+.backgroundP a:hover {
+    background-color: rgb(66, 66, 66);
+    text-shadow: 3px 3px 2px rgb(66, 66, 66);
+    opacity: 2;
+    border: 0;
+}
+
+.displayJogo .slug input[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover {
+    background-image: linear-gradient(rgb(23, 221, 23), rgb(6, 83, 6));
+}
+
+.displayJogo .worm input[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover {
+    background-image: linear-gradient(rgb(40, 37, 231), rgb(19, 5, 100));
+}
+
+.displayJogo .python input[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover {
+    background-image: linear-gradient(rgb(177, 177, 177), rgb(71, 71, 71));
+}

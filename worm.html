@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Snake Python</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body onload="iniciarJogo(80); carregarTotalPontos('totalPontos')" style="background-image: url('/image/fundo2.png');">
+    <div class="displayJogo">
+        <div class="row abaSuperior">
+            <div class="col-dm-3 col-dg-3 recordC">
+                <span id="placarRecord">0152</span>
+            </div>
+            <div class="col-dm-3 col-dg-3 dificuldadeC" style="color:rgb(21, 94, 230);">
+                <span id="dificuldade">WORM</span>
+            </div>
+            <div class="col-dm-3 col-dg-3 usuarioC">
+                <span id="nomeUsuario">USUÁRIO TESTE</span>
+            </div>
+
+            <div class="col-dm-3 col-dg-3 placarC">
+                <span id="totalPontos">0</span>
+            </div>
+        </div>
+        <div class="row labelTelaJogo">
+            <div class="col-dm-3 col-dg-3">
+                <label>BEST RECORD</label>
+            </div>
+            <div class="col-dm-3 col-dg-3">
+                <label>DIFICULDADE</label>
+            </div>
+            <div class="col-dm-3 col-dg-3">
+                <label>JOGADOR</label>
+            </div>
+
+            <div class="col-dm-3 col-dg-3">
+                <label>PLACAR</label>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-dm-12 col-dg-12">
+                <canvas id="canvas" width="1000" height="500"></canvas>
+            </div>
+        </div>
+
+        <div class="row botaoJogo worm">
+            <div class="col-dm-6 col-dg-6">
+                <input type="submit" value="NOVO JOGO" onclick="window.location='worm.html';">
+            </div>
+            <div class="col-dm-6 col-dg-6">
+                <input type="submit" value="VOLTAR" onclick="window.location='index.html';">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

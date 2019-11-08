@@ -1,0 +1,228 @@
+/*@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');*/
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue-Regular.woff);
+}
+
+@font-face {
+    font-family: VT323;
+    src: url(../fonts/VT323-Regular.ttf);
+}
+
+
+* {
+    font-family: 'VT323';
+    text-decoration: none;
+    margin: 0;
+    border: 0px;
+}
+
+body {
+    background-image: url("../image/fundo1.png");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: change 10s linear infinite;
+}
+
+.boxSnake1 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 70%;
+    max-height: 70%;
+
+}
+
+.efeitoFontePiscando {
+    font-size: 120px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    color: white;
+    text-shadow: 1.5px 1.5px 1px black;
+    padding-bottom: 100px;
+    animation: 0.5s 0.1s fontPiscando linear infinite;
+
+}
+
+h1 {
+    color: white;
+    padding: 5px;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: green;
+    font-family: BebasNeue;
+    font-size: 50px;
+    margin: 20px 0 0 0;
+    animation: 2s 1s fonteMudaCor linear infinite;
+    background-image: linear-gradient(rgba(134, 134, 134, 0.541), rgba(5, 77, 5, 0.411));
+    margin: 40px 0 20px 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(209, 209, 209);
+    padding: 20px;
+    text-shadow: 2px 2px rgb(243, 9, 9);
+
+}
+
+.mensagem span {
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(0, 73, 0);
+    font-size: 30px;
+}
+
+h3 {
+    color: white;
+    text-shadow: 1px 2px 2px rgb(26, 51, 3);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(0, 73, 0);
+    font-size: 30px;
+    padding: 5px;
+    margin: -20px 0 -10px 0;
+}
+
+.displayLogin {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: #619e5f91;
+    padding: 25px 10px 50px 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: 440px;
+    box-shadow: 3px 3px 5px 2px rgba(7, 153, 7, 0.541);
+    animation: 2s 1s borderMudaCor linear infinite;
+}
+
+.displayCadastro {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: #619e5f91;
+    padding: 25px 20px 15px 20px;
+    border-radius: 10px;
+    width: 578px;
+    height: 540px;
+    box-shadow: 3px 3px 5px 2px rgba(7, 153, 7, 0.541);
+    animation: 2s 1s borderMudaCor linear infinite;
+    margin-top: -50px;
+}
+
+.displayMensagem {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #619e5f91;
+    padding: 45px 10px 50px 10px;
+    border-radius: 10px;
+    width: 425px;
+    height: 150px;
+    box-shadow: 3px 3px 5px 2px rgba(7, 153, 7, 0.541);
+    animation: 2s 1s borderMudaCor linear infinite;
+
+}
+
+.infCad {
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+label {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #000000;
+    font-size: 35px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(18, 88, 9);
+    font-size: 30px;
+    border-radius: 10px;
+    margin: auto;
+    outline: 0;
+    height: 40px;
+    width: 290px;
+    text-align: center;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+input[type="button"],
+[type="reset"],
+[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 7px 0 #012c05;
+    transition: 0.01s;
+    color: #042b01;
+    text-shadow: 2px 2px 1px #495745;
+    background-image: linear-gradient(rgb(180, 185, 180), rgb(50, 83, 50));
+}
+
+input[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover {
+    animation: letterMove;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    letter-spacing: 3px;
+    transition: 0.01s;
+    color: white;
+    text-shadow: 2px 2px rgb(29, 29, 29);
+    box-shadow: 0 7px 0 #042b01;
+    color: white;
+    text-shadow: 2px 2px rgb(29, 29, 29);
+    background-image: linear-gradient(rgb(23, 221, 23), rgb(6, 83, 6));
+    width: 215px;
+    height: 60px;
+    font-weight: bolder;
+    font-size: 27px;
+}
+
+input[type="button"]:active,
+[type="reset"]:active,
+[type="submit"]:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+    transition: 0.01s;
+    outline:none;
+}
